@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+
+/*  Colors
+Very Dark Magenta: hsl(300, 43%, 22%)
+Soft Pink: hsl(333, 80%, 67%)
+Dark Grayish Magenta: hsl(303, 10%, 53%)
+Light Grayish Magenta: hsl(300, 24%, 96%)
+White: hsl(0, 0%, 100%)
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: "Spartan", sans-serif;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.container .img1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45vw;
+  height: 45vh;
+}
+
+.container .img2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 70vw;
+  height: 80vh;
+}
+
+.mainWrapper {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.topWrapper {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topLeft {
+  flex: 1;
+  padding: 50px;
+}
+
+.topLeft h1 {
+  color: hsl(300, 43%, 22%);
+  font-size: 3.2em;
+  font-weight: 700;
+  line-height: 1em;
+}
+
+.topLeft p {
+  color: hsl(303, 10%, 53%);
+  font-weight: 500;
+  line-height: 1.5em;
+  margin-top: 20px;
+}
+
+.topRight {
+  flex: 1;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rating {
+  background-color: hsl(300, 24%, 96%);
+  height: 20%;
+  width: 80%;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  margin: 10px 0;
+}
+
+.rating img {
+  margin-left: 10px;
+  width: 4%;
+}
+
+.rating p {
+  color: hsl(300, 43%, 22%);
+  font-weight: 700;
+  font-size: 0.8em;
+  margin-left: 10px;
+}
+
+.r1 {
+  align-self: start;
+}
+
+.r2 {
+  align-self: center;
+}
+
+.r3 {
+  align-self: end;
+}
+
+.testimonialsWrapper {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 35px;
+}
+
+.testimonial {
+  flex: 1;
+  height: 75%;
+  padding: 30px;
+  background-color: hsl(300, 43%, 22%);
+  color: hsl(300, 24%, 96%);
+  border-radius: 8px;
+  margin: 0 15px;
+}
+
+.testimonialHeader {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+}
+
+.testimonialHeader img {
+  border-radius: 50%;
+  width: 18%;
+  margin-right: 20px;
+}
+
+.nameWrapper h3 {
+  color: hsl(0, 0%, 100%);
+  font-size: 0.9em;
+}
+
+.nameWrapper h4 {
+  color: hsl(333, 80%, 67%);
+  font-size: 0.8em;
+  font-weight: 400;
+  padding-top: 5px;
+}
+
+.testimonial p {
+  font-size: 0.8em;
+  line-height: 1.5em;
+  margin-top: 10px;
+}
+
+.t1 {
+  align-self: start;
+}
+.t2 {
+  align-self: center;
+}
+.t3 {
+  align-self: end;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 400px) {
+  .container {
+    height: unset;
+    width: unset;
+    background-image: url("./images/bg-pattern-top-mobile.svg"),
+      url("./images/bg-pattern-bottom-mobile.svg");
+    background-position: left top, right bottom;
+    background-repeat: no-repeat, no-repeat;
+  }
+
+  .mainWrapper {
+    width: 95vw;
+  }
+
+  .container .img1,
+  .container .img2 {
+    display: none;
+  }
+
+  .topWrapper {
+    flex-direction: column;
+    padding: 20px 10px 10px;
+  }
+
+  .topLeft {
+    text-align: center;
+    padding: 70px 0 20px 0;
+  }
+
+  .topLeft h1 {
+    font-size: 2em;
+    padding: 0 20px;
+  }
+
+  .topRight {
+    width: 100%;
+    padding: 0;
+  }
+
+  .rating {
+    height: 25%;
+    width: 100%;
+    display: inline;
+    padding: 15px 0;
+    text-align: center;
+  }
+
+  .rating img {
+    width: 15px;
+    margin: 5px 0;
+  }
+
+  .testimonialsWrapper {
+    width: 90%;
+    flex-direction: column;
+    padding: 0 0 70px 0;
+  }
+
+  .testimonial {
+    width: 100%;
+    margin: 10px;
+  }
+
+  .t1,
+  .t2,
+  .t3 {
+    align-self: center;
+  }
+}
